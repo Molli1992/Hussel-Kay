@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./team.css";
 import { Card, Image, Heading, Text } from '@chakra-ui/react';
 
