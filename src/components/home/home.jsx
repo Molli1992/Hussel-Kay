@@ -78,6 +78,77 @@ function Home() {
 
             </div>
 
+
+
+            <div className="responsive">
+
+                <div className="container-home-2">
+
+                    <Text className="text-container-home-2">
+                        At Hussel Kay, we are dedicated to helping small and medium-sized businesses (SMBs)
+                        develop their online presence and reach their full growth potential through
+                        the implementation of effective digital marketing strategies.
+                    </Text>
+
+                </div>
+
+                <br></br>
+                <br></br>
+
+                <div className="container-home-3">
+
+                    <Card
+                        className="img-container-home-2"
+                    >
+                        <Image
+                            className="img-home-2"
+                            objectFit='cover'
+                            src='https://d500.epimg.net/cincodias/imagenes/2020/04/25/pyme/1587818498_248037_1587818664_noticia_normal.jpg'
+                            alt='Helping'
+                        />
+
+                    </Card>
+
+                </div>
+
+                <br></br>
+                <br></br>
+
+                <div className="container-home-2">
+
+                    <Text className="text-container-home-2">
+                        Our mission is to provide our clients with the best possible service, and to be
+                        recognized by them as a reliable and solid company in the field of digital marketing.
+                        We focus on developing solid relationships with our clients, based on trust and
+                        personalized attention to their needs and objectives
+                    </Text>
+
+                </div>
+
+                <br></br>
+                <br></br>
+
+                <div className="container-home-3">
+
+                    <Card
+                        className="img-container-home-2"
+                    >
+                        <Image
+                            className="img-home-2"
+                            objectFit='cover'
+                            src='https://www.reliablesoft.net/wp-content/uploads/2021/04/digital-marketing-services.jpeg'
+                            alt='Helping'
+                        />
+
+                    </Card>
+
+                </div>
+
+                <br></br>
+                <br></br>
+
+            </div>
+
             <div className="container-home-2">
 
                 <Text className="text-container-home-2">
