@@ -9,7 +9,6 @@
     width: 100%;
     height: 75px;
     background: #101922;
-    position: fixed;
     z-index: 10;
     left: 0;
     bottom: 0;
@@ -20,52 +19,25 @@
     width: 90%;
     max-width: 1200px;
     margin: auto;
-}
-
-.footer-logo {
-    float: left;
-    line-height: 75px;
-}
-
-.footer-logo h1 {
-    color: white;
-    font-weight: 400;
-    font-size: 24px;
-    cursor: default;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-menu {
-    float: right;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     line-height: 75px;
 }
 
 .footer-menu a {
     color: white;
     text-decoration: none;
-    display: inline-block;
-    padding: 20px 30px 0px 30px;
-    line-height: normal;
-    font-size: 16px;
-    transition: all 500ms ease;
-    border-bottom: 4px solid transparent;
+    padding: 0px 25px;
 }
 
 .footer-menu a:hover {
     color: #40de32;
     border-bottom: 4px solid #40de32;
-}
-
-@media(max-width: 600px) {
-
-    .footer-menu a {
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        padding: 20px 10px 0px 10px;
-        line-height: normal;
-        font-size: 16px;
-        transition: all 500ms ease;
-        border-bottom: 4px solid transparent;
-    }
-
 }

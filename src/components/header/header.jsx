@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-
+import { Link } from "react-router-dom";
 
 
 function header() {
@@ -23,10 +23,21 @@ function header() {
                 <input type="checkbox" id="btn-menu"></input>
 
                 <nav className="menu">
-                    <a href="#">Inicio</a>
-                    <a href="#">Servicios</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contacto</a>
+                    <Link to="/" className="rutasNav">
+                        Home
+                    </Link>
+
+                    <Link to="/services" className="rutasNav">
+                        Services
+                    </Link>
+
+                    <Link to="/contact" className="rutasNav">
+                        Contact
+                    </Link>
+
+                    <Link to="/team" className="rutasNav">
+                        Team
+                    </Link>
                 </nav>
 
             </div>
