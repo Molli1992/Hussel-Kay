@@ -79,6 +79,14 @@
         display: none;
     }
 
+    .container-text-services-2 {
+        display: none;
+    }
+
+    .container-img-services-2 {
+        display: none;
+    }
+
     .responsive-services {
         display: inline-block;
         background-color: aliceblue;
@@ -95,6 +103,14 @@
 @media(max-width: 550) {
 
     .container-flex-services {
+        display: none;
+    }
+
+    .container-text-services-2 {
+        display: none;
+    }
+
+    .container-img-services-2 {
         display: none;
     }
 

@@ -200,6 +200,36 @@ function Services() {
                 <div className="responsive-container-text-services-2">
 
                     <Text className="responsive-text-container-services-2">
+                        ● Digital communication strategy: We develop effective branding and performance strategies for our clients,
+                        using tools such as SEO, email marketing, marketing automation and other digital marketing resources
+                        to ensure a strong and consistent online presence.
+                    </Text>
+                </div>
+
+                <br></br>
+
+                <div className="responsive-container-img-services-2">
+
+                    <Card
+                        className="responsive-img-container-services-2"
+                    >
+                        <Image
+                            className="responsive-img-services-2"
+                            objectFit='cover'
+                            src='https://www.striata.com/wp-content/uploads/2019/06/digital-touchpoints-of-the-customer-journey.png'
+                            alt='Caffe Latte'
+                        />
+
+                    </Card>
+
+                </div>
+
+                <br></br>
+                <br></br>
+
+                <div className="responsive-container-text-services-2">
+
+                    <Text className="responsive-text-container-services-2">
                         ● Community Manager: We take care of administering and managing our clients' social networks effectively,
                         making sure to create and publish high-quality and relevant content for your audience, increase your
                         reach and engagement, and promote your brand and products effectively
