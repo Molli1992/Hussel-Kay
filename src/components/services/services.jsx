@@ -192,14 +192,14 @@ function Services() {
 
             </div>
 
-            <div className="responsive">
+            <div className="responsive-services">
 
                 <br></br>
                 <br></br>
 
-                <div className="container-text-services-2">
+                <div className="responsive-container-text-services-2">
 
-                    <Text className="text-container-services-2">
+                    <Text className="responsive-text-container-services-2">
                         ● Community Manager: We take care of administering and managing our clients' social networks effectively,
                         making sure to create and publish high-quality and relevant content for your audience, increase your
                         reach and engagement, and promote your brand and products effectively
@@ -208,13 +208,13 @@ function Services() {
 
                 <br></br>
 
-                <div className="container-img-services-2">
+                <div className="responsive-container-img-services-2">
 
                     <Card
-                        className="img-container-services-2"
+                        className="responsive-img-container-services-2"
                     >
                         <Image
-                            className="img-services-2"
+                            className="responsive-img-services-2"
                             objectFit='cover'
                             src='https://www.occ.com.mx/blog/wp-content/uploads/2018/12/community-manager-OCCMundial.jpg'
                             alt='Caffe Latte'
@@ -227,9 +227,9 @@ function Services() {
                 <br></br>
                 <br></br>
 
-                <div className="container-text-services-2">
+                <div className="responsive-container-text-services-2">
 
-                    <Text className="text-container-services-2">
+                    <Text className="responsive-text-container-services-2">
                         ● Paid Ads: We develop effective advertising campaigns on Google, Facebook, Instagram and other
                         advertising platforms, making sure to maximize the return on investment of our clients and achieve
                         the established performance objectives.
@@ -238,13 +238,13 @@ function Services() {
 
                 <br></br>
 
-                <div className="container-img-services-2">
+                <div className="responsive-container-img-services-2">
 
                     <Card
-                        className="img-container-services-2"
+                        className="responsive-img-container-services-2"
                     >
                         <Image
-                            className="img-services-2"
+                            className="responsive-img-services-2"
                             objectFit='cover'
                             src='https://blog.thomasnet.com/hubfs/shutterstock_630306113.jpg'
                             alt='Caffe Latte'
@@ -257,9 +257,9 @@ function Services() {
                 <br></br>
                 <br></br>
 
-                <div className="container-text-services-2">
+                <div className="responsive-container-text-services-2">
 
-                    <Text className="text-container-services-2">
+                    <Text className="responsive-text-container-services-2">
                         ● Content generation: We take care of generating high-quality and relevant content for our clients,
                         including blog articles, social media posts, videos, infographics and other types of content
                         designed to attract and retain the attention of your audience
@@ -268,13 +268,13 @@ function Services() {
 
                 <br></br>
 
-                <div className="container-img-services-2">
+                <div className="responsive-container-img-services-2">
 
                     <Card
-                        className="img-container-services-2"
+                        className="responsive-img-container-services-2"
                     >
                         <Image
-                            className="img-services-2"
+                            className="responsive-img-services-2"
                             objectFit='cover'
                             src='https://cdn.clickworker.com/wp-content/uploads/2016/11/content-planning.png'
                             alt='Caffe Latte'
@@ -287,9 +287,9 @@ function Services() {
                 <br></br>
                 <br></br>
 
-                <div className="container-text-services-2">
+                <div className="responsive-container-text-services-2">
 
-                    <Text className="text-container-services-2">
+                    <Text className="responsive-text-container-services-2">
                         ● Design: We have a design team specialized in creating attractive and effective
                         designs for websites, social networks, advertising and other digital materials
                     </Text>
@@ -297,13 +297,13 @@ function Services() {
 
                 <br></br>
 
-                <div className="container-img-services-2">
+                <div className="responsive-container-img-services-2">
 
                     <Card
-                        className="img-container-services-2"
+                        className="responsive-img-container-services-2"
                     >
                         <Image
-                            className="img-services-2"
+                            className="responsive-img-services-2"
                             objectFit='cover'
                             src='https://www.netsolutions.com/insights/wp-content/uploads/2022/01/guide-to-digital-product-design.webp'
                             alt='Caffe Latte'
