@@ -42,7 +42,7 @@ function Home() {
                     <Text className="text-container-home-1">
                         At Hussel Kay, we are dedicated to helping small and medium-sized businesses (SMBs)
                         develop their online presence and reach their full growth potential through
-                        the implementation of effective digital marketing strategies.
+                        the implementation of effective digital marketing strategies
                     </Text>
 
                 </Card>
@@ -87,7 +87,7 @@ function Home() {
                     <Text className="text-container-home-2">
                         At Hussel Kay, we are dedicated to helping small and medium-sized businesses (SMBs)
                         develop their online presence and reach their full growth potential through
-                        the implementation of effective digital marketing strategies.
+                        the implementation of effective digital marketing strategies
                     </Text>
 
                 </div>
@@ -155,7 +155,7 @@ function Home() {
                     At Hussel Kay, we value perseverance and creativity in finding effective solutions to
                     the challenges our clients face. We make sure that we are always up to date on the
                     latest trends and digital marketing tools, and that we apply them effectively in each
-                    of our projects.
+                    of our projects
                 </Text>
 
             </div>
@@ -171,7 +171,7 @@ function Home() {
                     <Image
                         className="img-home-2"
                         objectFit='cover'
-                        src='https://as1.ftcdn.net/v2/jpg/05/67/71/86/1000_F_567718668_4aa1BUCf7xGwuWx3L539IwzZNmFOzKoU.jpg'
+                        src='https://blog.bind.com.ar/wp-content/uploads/2019/09/shutterstock_357105203.jpg'
                         alt='Helping'
                     />
 

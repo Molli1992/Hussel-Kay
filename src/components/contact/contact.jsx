@@ -38,13 +38,13 @@ function Contact() {
                 <br></br>
 
                 <Text className="text-contact">
-                    Hussel Kay
+                    Hussel Kay LLC
                 </Text>
 
                 <br></br>
 
                 <Text className="text-contact">
-                    LLC 3511 NW 113TH CT DORAL,
+                    3511 NW 113TH CT DORAL,
                 </Text>
                 <Text className="text-contact">
                     FL 33178

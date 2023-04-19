@@ -18,7 +18,7 @@ function Services() {
                 <Heading className="title-services-text">Services</Heading>
                 <Text className="text-title-services">
                     At Hussel Kay, we offer a wide range of digital marketing services designed to help small
-                    and medium-sized businesses achieve their full growth potential online. Some of our services include
+                    and medium-sized businesses achieve their full growth potential online. Some of our services include:
                 </Text>
             </div>
 
@@ -69,7 +69,7 @@ function Services() {
                         <Text className="text-container-services">
                             ● Paid Ads: We develop effective advertising campaigns on Google, Facebook, Instagram and other
                             advertising platforms, making sure to maximize the return on investment of our clients and achieve
-                            the established performance objectives.
+                            the established performance objectives
                         </Text>
 
                     </Card>
@@ -99,7 +99,7 @@ function Services() {
                 <Text className="text-container-services-2">
                     ● Digital communication strategy: We develop effective branding and performance strategies for our clients,
                     using tools such as SEO, email marketing, marketing automation and other digital marketing resources
-                    to ensure a strong and consistent online presence.
+                    to ensure a strong and consistent online presence
                 </Text>
             </div>
 
@@ -202,7 +202,7 @@ function Services() {
                     <Text className="responsive-text-container-services-2">
                         ● Digital communication strategy: We develop effective branding and performance strategies for our clients,
                         using tools such as SEO, email marketing, marketing automation and other digital marketing resources
-                        to ensure a strong and consistent online presence.
+                        to ensure a strong and consistent online presence
                     </Text>
                 </div>
 
@@ -262,7 +262,7 @@ function Services() {
                     <Text className="responsive-text-container-services-2">
                         ● Paid Ads: We develop effective advertising campaigns on Google, Facebook, Instagram and other
                         advertising platforms, making sure to maximize the return on investment of our clients and achieve
-                        the established performance objectives.
+                        the established performance objectives
                     </Text>
                 </div>
 
