@@ -12,6 +12,15 @@
     display: none;
 }
 
+.logo-home {
+    align-items: center;
+}
+
+.logo-home img {
+    height: 120px;
+    width: 300px;
+}
+
 .title-home {
     text-align: center;
 }

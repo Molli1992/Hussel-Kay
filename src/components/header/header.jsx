@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
-
+import Logo from "../../logos/Logos-Hussel-Kay.png";
 
 function header() {
 
@@ -13,7 +13,7 @@ function header() {
             <div className="container">
 
                 <div className="logo">
-                    <h1>Hussel Kay</h1>
+                    <img src={Logo} />
                 </div>
 
                 <div className="boton">

@@ -23,14 +23,12 @@
 
 .logo {
     float: left;
-    line-height: 75px;
+    padding-top: 5px;
 }
 
-.logo h1 {
-    color: white;
-    font-weight: 400;
-    font-size: 24px;
-    cursor: default;
+.logo img {
+    height: 60px;
+    width: 120px;
 }
 
 .menu {
@@ -80,13 +78,14 @@
         height: 60px;
     }
 
-    .logo,
-    .boton {
-        line-height: 60px;
+    .logo {
+        float: left;
+        padding-top: 5px;
     }
 
-    .logo h1 {
-        font-size: 20px;
+    .logo img {
+        height: 50px;
+        width: 100px;
     }
 
     .menu {
@@ -109,6 +108,7 @@
 
     .boton {
         display: block;
+        padding-top: 22px;
         float: right;
     }
 

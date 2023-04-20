@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import { Card, Image, Heading, Text } from '@chakra-ui/react';
 import Contact from "../contact/contact";
-
+import Logo from "../../logos/Logos-Hussel-Kay.png";
 
 function Home() {
 
@@ -14,9 +14,12 @@ function Home() {
 
             <br></br>
 
+            <div className="logo-home">
+                <img src={Logo} />
+            </div>
+
             <div className="title-home">
-                <Heading className="title-home-text">Hussel Kay</Heading>
-                <Text className="text-title">Marketing Digital</Text>
+                <Text className="text-title">Digital Marketing</Text>
             </div>
 
             <br></br>
