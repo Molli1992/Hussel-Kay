@@ -13,7 +13,7 @@ function header() {
             <div className="container">
 
                 <div className="logo">
-                    <img src={Logo} />
+                    <img src={Logo} alt="Logo" />
                 </div>
 
                 <div className="boton">
