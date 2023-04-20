@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import { Card, Image, Heading, Text } from '@chakra-ui/react';
+import { Card, Image, Text } from '@chakra-ui/react';
 import Contact from "../contact/contact";
 import Logo from "../../logos/Logos-Hussel-Kay.png";
 
