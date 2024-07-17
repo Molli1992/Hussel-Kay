@@ -1,7 +1,7 @@
 .body-home {
     display: inline-block;
     background-color: aliceblue;
-    min-height: 100vh;
+    min-height: calc(100vh - 150px);
     width: 100%;
     align-items: center;
     justify-content: center;
