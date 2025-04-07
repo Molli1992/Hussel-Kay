@@ -1,50 +1,175 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.css";
-import { Card, Image, Heading, Text } from "@chakra-ui/react";
-import ContactImage from "../../images/contact.jpg";
+import Swal from "sweetalert2";
 
-function Contact() {
+function Contacto() {
+  const [state, setState] = useState({
+    nombre: "",
+    mail: "",
+    servicio: "",
+    mensaje: "",
+  });
+  const [stateScroll, setStateScroll] = useState(true);
+
+  if (stateScroll === true) {
+    window.scroll(0, 0);
+    setStateScroll(false);
+  }
+
+  const onChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+
+    console.log(state);
+  };
+
+  const onSubmit = () => {
+    if (
+      state.nombre === "" ||
+      state.mail === "" ||
+      state.servicio === "" ||
+      state.mensaje === ""
+    ) {
+      Swal.fire({
+        title: "Info!",
+        text: "Complete all fields!",
+        icon: "info",
+        confirmButtonText: "Ok",
+      });
+    } else {
+      Swal.fire({
+        title: "Successce!",
+        text: "Message sent successfully!",
+        icon: "success",
+        confirmButtonText: "Ok",
+      }).then(() => {
+        setState({
+          nombre: "",
+          mail: "",
+          servicio: "",
+          mensaje: "",
+        });
+      });
+    }
+  };
+
   return (
-    <div className="body-contact">
-      <Card
-        className="container-img-contact"
-        overflow="hidden"
-        variant="outline"
-      >
-        <Image
-          className="img-contact"
-          objectFit="cover"
-          src={ContactImage}
-          alt="Contact Us"
-        />
-      </Card>
+    <div>
+      <div className="body-contact">
+        <section className="contact">
+          <div className="contact-content">
+            <h2 className="contact-h2">¡Contact us now!</h2>
+            <p className="contact-p">
+              Our team of experts is ready to help you.
+            </p>
+          </div>
 
-      <Card
-        className="container-text-contact"
-        overflow="hidden"
-        variant="outline"
-      >
-        <Heading className="title-contact">Contact Us</Heading>
+          <div className="contact-container">
+            <div className="contact-info">
+              <div className="contact-box">
+                <div className="contact-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+                <div className="contact-text">
+                  <h3 className="contact-h3">Address</h3>
+                  <p className="contact-p-2">
+                    3511 NW 113TH CT DORAL, FL 33178
+                  </p>
+                </div>
+              </div>
 
-        <br></br>
+              <div className="contact-box">
+                <div className="contact-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <div className="contact-text">
+                  <h3 className="contact-h3">Phone</h3>
+                  <p className="contact-p-2">+1 (786) 834 1705</p>
+                </div>
+              </div>
 
-        <Text className="text-contact">Hussel Kay LLC</Text>
+              <div className="contact-box">
+                <div className="contact-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <div className="contact-text">
+                  <h3 className="contact-h3">Mail</h3>
+                  <p className="contact-p-2">husselkayllc@gmail.com</p>
+                </div>
+              </div>
+            </div>
 
-        <br></br>
+            <div className="contact-form">
+              <form>
+                <h2 className="contact-form-h2">Send Message</h2>
+              </form>
 
-        <Text className="text-contact">3511 NW 113TH CT DORAL,</Text>
-        <Text className="text-contact">FL 33178</Text>
+              <div>
+                <div className="contact-input-box">
+                  <input
+                    type="text"
+                    name="nombre"
+                    required="required"
+                    placeholder=" "
+                    onChange={onChange}
+                    value={state.nombre}
+                  />
+                  <span>Name</span>
+                </div>
 
-        <br></br>
+                <div className="contact-input-box">
+                  <input
+                    type="text"
+                    name="mail"
+                    required="required"
+                    placeholder=" "
+                    onChange={onChange}
+                    value={state.mail}
+                  />
+                  <span>Mail</span>
+                </div>
 
-        <Text className="text-contact">+1 (786) 834 1705</Text>
+                <div className="contact-input-box">
+                  <input
+                    type="text"
+                    name="servicio"
+                    required="required"
+                    placeholder=" "
+                    onChange={onChange}
+                    value={state.servicio}
+                  />
+                  <span>Service</span>
+                </div>
 
-        <br></br>
+                <div className="contact-input-box">
+                  <textarea
+                    required="required"
+                    name="mensaje"
+                    placeholder=" "
+                    onChange={onChange}
+                    value={state.mensaje}
+                  ></textarea>
+                  <span>Write your message...</span>
+                </div>
 
-        <Text className="text-contact">husselkayllc@gmail.com</Text>
-      </Card>
+                <div className="contact-input-box">
+                  <input
+                    type="submit"
+                    name=""
+                    value="Send"
+                    className="btn-contacto"
+                    onClick={onSubmit}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
 
-export default Contact;
+export default Contacto;
