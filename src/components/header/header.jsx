@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./header.css";
+import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 import Logo from "../../logos/Logos-Hussel-Kay.png";
 
@@ -12,6 +12,7 @@ function Header() {
   };
 
   const closeMenu = () => {
+    window.scroll(0, 0);
     if (window.innerWidth <= 700) {
       setMenu(false);
     }
@@ -38,38 +39,44 @@ function Header() {
   }, [menu]);
 
   return (
-    <header className="header" ref={navRef}>
-      <div className="container">
-        <Link to="/" className="logo" onClick={() => closeMenu()}>
+    <header className={styles.header} ref={navRef}>
+      <div className={styles.container}>
+        <Link to="/" className={styles.logo} onClick={() => closeMenu()}>
           <img src={Logo} alt="Logo" />
         </Link>
 
-        <div className="boton" onClick={openMenu}>
+        <div className={styles.boton} onClick={openMenu}>
           <label htmlFor="btn-menu">Menu</label>
         </div>
 
-        <input type="checkbox" id="btn-menu" />
-
         {menu && (
-          <nav className="menu">
-            <Link to="/" className="rutasNav" onClick={() => closeMenu()}>
+          <nav className={styles.menu}>
+            <Link
+              to="/"
+              className={styles.rutasNav}
+              onClick={() => closeMenu()}
+            >
               Home
             </Link>
             <Link
               to="/services"
-              className="rutasNav"
+              className={styles.rutasNav}
               onClick={() => closeMenu()}
             >
               Services
             </Link>
             <Link
               to="/contact"
-              className="rutasNav"
+              className={styles.rutasNav}
               onClick={() => closeMenu()}
             >
               Contact
             </Link>
-            <Link to="/team" className="rutasNav" onClick={() => closeMenu()}>
+            <Link
+              to="/team"
+              className={styles.rutasNav}
+              onClick={() => closeMenu()}
+            >
               Team
             </Link>
           </nav>

@@ -1,5 +1,6 @@
 .body-contact {
   background-color: lightgray;
+  margin-top: 75px;
 }
 
 .contact {
@@ -59,7 +60,6 @@
 
 .contact-text {
   display: flex;
-  margin-left: 20px;
   font-size: 16px;
   color: #333333;
   flex-direction: column;
@@ -176,7 +176,7 @@
 
 @media (max-width: 500px) {
   .contact {
-    padding: 10px;
+    padding: 40px 10px;
   }
 
   .contact-info {
