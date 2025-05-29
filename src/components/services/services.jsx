@@ -151,7 +151,7 @@ function Services() {
         </div>
 
         <img
-          src="https://www.comunicare.es/wp-content/uploads/2021/03/marketing-digital-tendencias-diseno-web-2018.jpg"
+          src="https://img.freepik.com/foto-gratis/concepto-programacion-navegacion-tecnologia-diseno-web_53876-163260.jpg?semt=ais_hybrid&w=740"
           className={styles.img}
           style={{ width: "100%" }}
           alt="Logo"
