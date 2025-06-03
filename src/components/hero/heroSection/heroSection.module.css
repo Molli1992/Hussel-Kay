@@ -1,0 +1,100 @@
+.body {
+  width: 100%;
+  height: calc(90vh - 105px);
+  background-image: url("https://img.pikbest.com/ai/illus_our/20230427/b22e939b7cb198948b56caf9509f7f4f.jpg!bw700");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 75px;
+}
+
+.text {
+  font-size: 25px;
+}
+
+.button {
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: #8a2be2;
+  border: 1px solid #8a2be2;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.iconsContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.icon {
+  font-size: 25px;
+  color: #f57c48;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #d3c9c1;
+}
+
+.line {
+  width: 1.5px;
+  background-color: #d3c9c1;
+  height: 100px;
+  border-radius: 20px;
+}
+
+@media (max-width: 925px) {
+  .iconsContainer {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 65px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}

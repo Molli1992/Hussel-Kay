@@ -1,11 +1,10 @@
-import React from "react";
 import styles from "./home.module.css";
-import Logo from "../../assets/logos/Logos-Hussel-Kay.png";
+import HeroSection from "../../components/hero/heroSection/heroSection";
 
 export default function Home() {
   return (
     <div className="body">
-      <h1>Home</h1>
+      <HeroSection />
     </div>
   );
 }

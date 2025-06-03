@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./service.module.css";
 
 export default function Services() {

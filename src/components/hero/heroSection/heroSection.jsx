@@ -1,9 +1,44 @@
 import styles from "./heroSection.module.css";
+import { useNavigate } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const goContact = () => {
+    navigate("/contact");
+  };
+
+  const handleOpenLink = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className={styles.body}>
-      <h1>Hero Section</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>DIGITAL SERVICES</h1>
+        <p className={styles.text}>BUILDING YOUR EMPIRE DIGITALLY</p>
+        <button className={styles.button} onClick={goContact}>
+          Contact Us
+        </button>
+
+        <div className={styles.iconsContainer}>
+          <FaFacebook
+            className={styles.icon}
+            onClick={() => handleOpenLink("https://www.facebook.com/")}
+          />
+          <FaInstagram
+            className={styles.icon}
+            onClick={() => handleOpenLink("https://www.instagram.com/")}
+          />
+          <FaTwitter
+            className={styles.icon}
+            onClick={() => handleOpenLink("https://x.com/")}
+          />
+
+          <div className={styles.line} />
+        </div>
+      </div>
     </div>
   );
 }
