@@ -1,6 +1,6 @@
 import styles from "./footer.module.css";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logos/Logos-Hussel-Kay.png";
 import {
   FaFacebook,
@@ -14,6 +14,11 @@ import { FaRegClock } from "react-icons/fa6";
 
 export default function Footer() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
 
   const handleOpenLink = (url) => {
     window.open(url, "_blank");
@@ -23,7 +28,7 @@ export default function Footer() {
     <footer className={styles.body}>
       <div className={styles.footer}>
         <div className={styles.container}>
-          <img src={Logo} alt="Logo" className={styles.logo} />
+          <img src={Logo} alt="Logo" className={styles.logo} onClick={goHome} />
 
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

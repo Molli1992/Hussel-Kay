@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logos/Logos-Hussel-Kay.png";
@@ -8,8 +8,13 @@ import { IoCloseSharp } from "react-icons/io5";
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
   const menuRef = useRef(null);
+
+  const goHome = () => {
+    navigate("/");
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -32,7 +37,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.container} ${styles.logoContainer}`}>
-        <img src={Logo} alt="Logo" className={styles.logo} />
+        <img src={Logo} alt="Logo" className={styles.logo} onClick={goHome} />
       </div>
 
       <nav className={styles.container}>
@@ -85,7 +90,15 @@ export default function Header() {
       {menu ? (
         <div className={styles.menu} ref={menuRef}>
           <div className={styles.menuContainer}>
-            <img src={Logo} alt="Logo" className={styles.logo} />
+            <img
+              src={Logo}
+              alt="Logo"
+              className={styles.logo}
+              onClick={() => {
+                goHome();
+                setMenu(false);
+              }}
+            />
 
             <div>
               <button className={styles.button} onClick={() => setMenu(false)}>

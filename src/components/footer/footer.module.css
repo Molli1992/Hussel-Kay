@@ -25,6 +25,7 @@
 .logo {
   width: 135;
   height: 75px;
+  cursor: pointer;
 }
 
 .text {
