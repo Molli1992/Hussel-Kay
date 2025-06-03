@@ -1,6 +1,6 @@
 .body {
   width: 100%;
-  height: calc(90vh - 105px);
+  min-height: calc(90vh - 105px);
   background-image: url("https://img.pikbest.com/ai/illus_our/20230427/b22e939b7cb198948b56caf9509f7f4f.jpg!bw700");
   background-size: cover;
   background-position: center;

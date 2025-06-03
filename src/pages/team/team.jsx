@@ -1,9 +1,10 @@
 import styles from "./team.module.css";
+import HeroHeader from "../../components/hero/heroHeader/heroHeader";
 
 export default function Team() {
   return (
     <div className="body">
-      <h1>Team</h1>
+      <HeroHeader title="Meet Our Team" route="Team" />
     </div>
   );
 }

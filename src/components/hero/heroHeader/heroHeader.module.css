@@ -1,0 +1,41 @@
+.body {
+  width: 100%;
+  min-height: calc(50vh - 105px);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #3a1c40 70%, #5b2b64);
+  color: #ffffff;
+  gap: 25px;
+  text-align: center;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.link {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #ff7527;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.line {
+  font-size: 25px;
+  color: #ff7527;
+}

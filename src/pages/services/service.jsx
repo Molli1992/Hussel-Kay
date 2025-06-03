@@ -1,9 +1,10 @@
 import styles from "./service.module.css";
+import HeroHeader from "../../components/hero/heroHeader/heroHeader";
 
 export default function Services() {
   return (
     <div className="body">
-      <h1>Services</h1>
+      <HeroHeader title="We Do Everything" route="Services" />
     </div>
   );
 }
