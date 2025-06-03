@@ -14,3 +14,12 @@ a {
   cursor: pointer;
   color: inherit;
 }
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 105px 25px 75px 25px;
+  gap: 75px;
+  min-height: 200vh;
+}

@@ -4,7 +4,7 @@ import Logo from "../../assets/logos/Logos-Hussel-Kay.png";
 
 export default function Home() {
   return (
-    <div className={styles.body}>
+    <div className="body">
       <h1>Home</h1>
     </div>
   );

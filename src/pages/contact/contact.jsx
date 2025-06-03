@@ -3,7 +3,7 @@ import styles from "./contact.module.css";
 
 export default function Contact() {
   return (
-    <div className={styles.body}>
+    <div className="body">
       <h1>Contact</h1>
     </div>
   );
