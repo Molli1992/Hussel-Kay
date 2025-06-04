@@ -1,30 +1,117 @@
+import { useState } from "react";
 import styles from "./contactForm.module.css";
 import BlueButton from "../buttons/blueButton";
 import { FaHouse } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import Swal from "sweetalert2";
+import { validEmail } from "../../utils/regex";
 
 export default function ContactForm() {
+  const [data, setData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    address: "",
+    message: "",
+  });
+
+  const onChangeData = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (
+      !data.name ||
+      !data.phone ||
+      !data.email ||
+      !data.address ||
+      !data.message
+    ) {
+      Swal.fire({
+        title: "Info!",
+        text: "Complete all fields.",
+        icon: "info",
+        confirmButtonText: "Ok",
+      });
+    } else if (!validEmail(data.email)) {
+      Swal.fire({
+        title: "Info!",
+        text: "Please enter a valid email address.",
+        icon: "info",
+        confirmButtonText: "Ok",
+      });
+    } else {
+      Swal.fire({
+        title: "Success!",
+        text: "Email sent success.",
+        icon: "success",
+        confirmButtonText: "Ok",
+      });
+
+      setData({
+        name: "",
+        phone: "",
+        email: "",
+        address: "",
+        message: "",
+      });
+    }
+  };
+
   return (
     <section className={styles.body}>
       <form className={styles.form}>
         <div className={styles.container}>
-          <input className={styles.input} placeholder="Name" />
-          <input className={styles.input} placeholder="Phone Number" />
+          <input
+            className={styles.input}
+            placeholder="Name"
+            name="name"
+            value={data.name}
+            onChange={onChangeData}
+          />
+          <input
+            className={styles.input}
+            placeholder="Phone Number"
+            name="phone"
+            value={data.phone}
+            onChange={onChangeData}
+            type="number"
+          />
         </div>
 
         <div className={styles.container}>
-          <input className={styles.input} placeholder="Email" />
-          <input className={styles.input} placeholder="Address" />
+          <input
+            className={styles.input}
+            placeholder="Email"
+            name="email"
+            value={data.email}
+            onChange={onChangeData}
+          />
+          <input
+            className={styles.input}
+            placeholder="Address"
+            name="address"
+            value={data.address}
+            onChange={onChangeData}
+          />
         </div>
 
         <textarea
           className={styles.input}
           placeholder="Message"
           style={{ height: "85px" }}
+          name="message"
+          value={data.message}
+          onChange={onChangeData}
         />
 
-        <BlueButton width="100%" />
+        <BlueButton width="100%" onClick={(e) => sendEmail(e)} />
       </form>
 
       <div className={styles.container}>
