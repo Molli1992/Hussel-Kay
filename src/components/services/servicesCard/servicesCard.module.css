@@ -1,0 +1,68 @@
+.body {
+  height: 400px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #9b59b6;
+  position: relative;
+}
+
+.iconContainer {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 40px;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.link {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.link:hover {
+  transform: translateX(5px);
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+@media (max-width: 400px) {
+  .link {
+    bottom: 30px;
+  }
+}
