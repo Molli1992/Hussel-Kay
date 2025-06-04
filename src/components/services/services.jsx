@@ -4,7 +4,7 @@ import ServicesCard from "./servicesCard/servicesCard";
 
 export default function Services() {
   return (
-    <div className={styles.body}>
+    <section className={styles.body}>
       <div className={styles.container}>
         {servicesData &&
           servicesData.map((service) => {
@@ -18,6 +18,6 @@ export default function Services() {
             );
           })}
       </div>
-    </div>
+    </section>
   );
 }

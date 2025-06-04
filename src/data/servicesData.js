@@ -1,7 +1,7 @@
 import {
   FaLaptopCode,
   FaSearch,
-  FaShareAlt, // Changed from FaSocialMedia to FaShareAlt
+  FaShareAlt,
   FaEnvelope,
   FaChartLine,
   FaWordpress,

@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className={styles.container}>
         <h1 className={styles.title}>DIGITAL SERVICES</h1>
         <p className={styles.text}>BUILDING YOUR EMPIRE DIGITALLY</p>
-        <BlueButton onClick={goContact} />
+        <BlueButton onClick={goContact} value="Contact Us" />
 
         <div className={styles.iconsContainer}>
           <FaFacebook

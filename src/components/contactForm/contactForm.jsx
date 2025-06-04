@@ -111,7 +111,7 @@ export default function ContactForm() {
           onChange={onChangeData}
         />
 
-        <BlueButton width="100%" onClick={(e) => sendEmail(e)} />
+        <BlueButton width="100%" onClick={(e) => sendEmail(e)} value="Contact Us"/>
       </form>
 
       <div className={styles.container}>
