@@ -9,7 +9,12 @@ export default function Team() {
         {teamData &&
           teamData.map((data) => {
             return (
-              <TeamCard src={data.src} name={data.name} role={data.role} />
+              <TeamCard
+                src={data.src}
+                name={data.name}
+                role={data.role}
+                key={data.name}
+              />
             );
           })}
       </div>
