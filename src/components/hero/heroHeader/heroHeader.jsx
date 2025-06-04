@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function HeroHeader({ title, route }) {
   return (
-    <div className={styles.body}>
+    <section className={styles.body}>
       <h1 className={styles.title}>{title}</h1>
 
       <div className={styles.container}>
@@ -13,6 +13,6 @@ export default function HeroHeader({ title, route }) {
         <p className={styles.line}>//</p>
         <p className={styles.text}>{route}</p>
       </div>
-    </div>
+    </section>
   );
 }

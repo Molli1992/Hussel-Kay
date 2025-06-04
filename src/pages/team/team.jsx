@@ -3,8 +3,8 @@ import HeroHeader from "../../components/hero/heroHeader/heroHeader";
 
 export default function Team() {
   return (
-    <div className="body">
+    <main className="body">
       <HeroHeader title="Meet Our Team" route="Team" />
-    </div>
+    </main>
   );
 }

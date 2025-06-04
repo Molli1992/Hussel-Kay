@@ -1,10 +1,12 @@
-import styles from "./contact.module.css";
 import HeroHeader from "../../components/hero/heroHeader/heroHeader";
+import ContactForm from "../../components/contactForm/contactForm";
 
 export default function Contact() {
   return (
-    <div className="body">
+    <main className="body" style={{ backgroundColor: "#150725" }}>
       <HeroHeader title="Let's Talk To Us" route="Contact Us" />
-    </div>
+
+      <ContactForm />
+    </main>
   );
 }

@@ -1,0 +1,13 @@
+.blueButton {
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: #8a2be2;
+  border: 1px solid #8a2be2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.blueButton:hover {
+  background-color: transparent;
+}

@@ -5,8 +5,19 @@
 }
 
 button {
-  all: unset;
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
 }
 
 a {
@@ -21,5 +32,4 @@ a {
   flex-direction: column;
   padding: 105px 0px 75px 0px;
   gap: 75px;
-  min-height: 200vh;
 }

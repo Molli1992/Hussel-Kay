@@ -3,8 +3,8 @@ import HeroSection from "../../components/hero/heroSection/heroSection";
 
 export default function Home() {
   return (
-    <div className="body">
+    <main className="body">
       <HeroSection />
-    </div>
+    </main>
   );
 }

@@ -1,6 +1,7 @@
 import styles from "./heroSection.module.css";
 import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import BlueButton from "../../buttons/blueButton";
 
 export default function HeroSection() {
   const navigate = useNavigate();
@@ -14,13 +15,11 @@ export default function HeroSection() {
   };
 
   return (
-    <div className={styles.body}>
+    <section className={styles.body}>
       <div className={styles.container}>
         <h1 className={styles.title}>DIGITAL SERVICES</h1>
         <p className={styles.text}>BUILDING YOUR EMPIRE DIGITALLY</p>
-        <button className={styles.button} onClick={goContact}>
-          Contact Us
-        </button>
+        <BlueButton onClick={goContact} />
 
         <div className={styles.iconsContainer}>
           <FaFacebook
@@ -39,6 +38,6 @@ export default function HeroSection() {
           <div className={styles.line} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
