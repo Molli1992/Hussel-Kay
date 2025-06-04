@@ -39,3 +39,9 @@
   font-size: 25px;
   color: #ff7527;
 }
+
+@media (max-width: 600px) {
+  .body {
+    padding: 25px 15px;
+  }
+}

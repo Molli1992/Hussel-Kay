@@ -1,4 +1,5 @@
 import styles from "./aboutUs.module.css";
+import Separator from "../../separator/separator";
 
 export default function AboutUs() {
   return (
