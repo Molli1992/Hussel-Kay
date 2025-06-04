@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 import { FaRegClock } from "react-icons/fa6";
+import { handleOpenLink } from "../../utils/utils";
 
 export default function Footer() {
   const location = useLocation();
@@ -18,10 +19,6 @@ export default function Footer() {
 
   const goHome = () => {
     navigate("/");
-  };
-
-  const handleOpenLink = (url) => {
-    window.open(url, "_blank");
   };
 
   return (

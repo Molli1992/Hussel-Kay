@@ -7,3 +7,7 @@ export const validEmail = (email) => {
 
   return true;
 };
+
+export const handleOpenLink = (url) => {
+  window.open(url, "_blank");
+};

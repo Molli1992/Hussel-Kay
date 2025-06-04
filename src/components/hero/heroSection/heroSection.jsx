@@ -2,16 +2,13 @@ import styles from "./heroSection.module.css";
 import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import BlueButton from "../../buttons/blueButton";
+import { handleOpenLink } from "../../../utils/utils";
 
 export default function HeroSection() {
   const navigate = useNavigate();
 
   const goContact = () => {
     navigate("/contact");
-  };
-
-  const handleOpenLink = (url) => {
-    window.open(url, "_blank");
   };
 
   return (

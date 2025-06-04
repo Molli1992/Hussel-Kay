@@ -4,7 +4,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./pages/home/home";
 import Services from "./pages/services/service";
-import Team from "./pages//team/team";
+import TeamPage from "./pages/teamPage/teamPage";
 import Contact from "./pages/contact/contact";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

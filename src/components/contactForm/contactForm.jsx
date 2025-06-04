@@ -5,7 +5,7 @@ import { FaHouse } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import Swal from "sweetalert2";
-import { validEmail } from "../../utils/regex";
+import { validEmail } from "../../utils/utils";
 
 export default function ContactForm() {
   const [data, setData] = useState({
