@@ -18,9 +18,9 @@ export default function HomeServices() {
         <Separator title="SERVICES" />
         <h1 className={styles.title}>Services We Offer</h1>
         <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry’s standard dummy text
-          ever.
+          We provide cutting-edge digital marketing services to help your brand
+          grow, attract more customers, and stay ahead of the competition
+          online.
         </p>
 
         <div className={styles.buttonContainer}>
