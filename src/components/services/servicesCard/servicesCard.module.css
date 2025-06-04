@@ -12,6 +12,11 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   background-color: #9b59b6;
   position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+
+.body:hover {
+  transform: scale(1.05);
 }
 
 .iconContainer {
