@@ -6,11 +6,8 @@ import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 
 export default function Reviews() {
   const [index, setIndex] = useState(1);
-  const [direction, setDirection] = useState("right");
 
   const handleChange = (param) => {
-    setDirection(param === "more" ? "right" : "left");
-
     setIndex((prev) => {
       if (param === "more") {
         return prev === 3 ? 1 : prev + 1;
@@ -37,20 +34,11 @@ export default function Reviews() {
             reviewsData.map((review) => {
               if (review.index === index) {
                 return (
-                  <div
-                    key={index}
-                    className={`${styles.cardAnimation} ${
-                      direction === "right"
-                        ? styles.slideRight
-                        : styles.slideLeft
-                    }`}
-                  >
-                    <ReviewsCard
-                      desc={review.desc}
-                      name={review.name}
-                      role={review.role}
-                    />
-                  </div>
+                  <ReviewsCard
+                    desc={review.desc}
+                    name={review.name}
+                    role={review.role}
+                  />
                 );
               }
               return null;
