@@ -1,117 +1,187 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
 .header {
-  width: 100%;
-  height: 75px;
-  background: #101922;
-  z-index: 10;
+  position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  background: #3a1c40;
+  z-index: 999;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  float: left;
-  padding-top: 5px;
-}
-
-.logo img {
-  height: 60px;
-  width: 120px;
-}
-
-.menu {
-  float: right;
-  line-height: 75px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 20px;
-  line-height: normal;
-  font-size: 16px;
-  transition: all 500ms ease;
-  border-bottom: 4px solid transparent;
-}
-
-.menu a:hover {
-  color: #40de32;
-  border-bottom: 4px solid #40de32;
-}
-
-#btn-menu {
-  display: none;
-}
-
-.boton {
-  display: none;
-}
-
-.boton label {
-  color: white;
-  background: #2a343e;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 3px;
+  width: 135px;
+  height: 75px;
   cursor: pointer;
 }
 
-.boton label:hover {
-  color: rgb(201, 221, 221);
+.list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-@media (max-width: 700px) {
-  .header {
-    height: 60px;
+.link {
+  font-size: 18px;
+  color: #d3c9c1;
+}
+
+.link:hover {
+  color: #f57c48;
+}
+
+.buttonLink {
+  font-size: 18px;
+  background-color: #d3c9c1;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.buttonLink:hover {
+  background-color: #f57c48;
+}
+
+.iconContainer {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #8a2be2;
+  border: 1px solid #8a2be2;
+  font-size: 26px;
+  padding: 10px 17px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #150725;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 300px;
+  background-color: #3d0f41;
+  padding: 30px 15px;
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 999;
+}
+
+.menu.show {
+  display: none;
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.menu.hide {
+  display: none;
+  animation: slideOutToLeft 0.5s ease-in forwards;
+}
+
+.menuContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.flexContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialNetworks {
+  font-size: 22px;
+  color: #f57c48;
+  cursor: pointer;
+}
+
+.socialNetworks:hover {
+  color: #d3c9c1;
+}
+
+@media (max-width: 1100px) {
+  .logoContainer {
+    justify-content: left;
   }
 
-  .logo {
-    float: left;
-    padding-top: 5px;
+  .list {
+    justify-content: right;
+  }
+}
+
+@media (max-width: 750px) {
+  .list {
+    display: none;
   }
 
-  .logo img {
-    height: 50px;
-    width: 100px;
+  .iconContainer {
+    display: flex;
   }
 
   .menu {
-    display: block;
-    background: #234;
-    width: 100%;
-    height: 40vh;
-    top: 60px;
-    left: 0;
+    display: flex;
   }
 
-  .menu a {
-    display: block;
-    margin-top: 10px;
+  .menu.show {
+    display: flex;
   }
 
-  .boton {
-    display: block;
-    padding-top: 22px;
-    float: right;
-  }
-
-  .boton:hover {
-    display: block;
+  .menu.hide {
+    display: flex;
   }
 }

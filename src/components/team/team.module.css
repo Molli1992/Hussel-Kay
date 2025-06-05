@@ -1,75 +1,40 @@
 .body {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 75px;
-  padding: 50px 0px;
-  margin-top: 75px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 25px;
 }
 
 .container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 40px;
-  gap: 40px;
-  text-align: center;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
 }
 
-.title {
-  font-size: 50px;
-}
-
-.description {
-  font-size: 18px;
-}
-
-.img {
-  width: 50%;
-  height: 400px;
-}
-
-.containerText {
-  width: 50%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.textTitle {
-  font-size: 32px;
-}
-
-.text {
-  font-size: 16px;
-}
-
-@media (max-width: 960px) {
+@media (max-width: 1275px) {
   .container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .img {
-    width: 100%;
-  }
-
-  .containerText {
-    width: 100%;
-    height: auto;
+    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 975px) {
   .container {
+    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 675px) {
+  .body {
     padding: 0px 15px;
   }
 
-  .img {
-    height: 300px;
+  .container {
+    max-width: 300px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

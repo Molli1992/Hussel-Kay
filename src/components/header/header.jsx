@@ -1,89 +1,188 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
-import Logo from "../../logos/Logos-Hussel-Kay.png";
+import Logo from "../../assets/logos/Logos-Hussel-Kay.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { handleOpenLink } from "../../utils/utils";
 
-function Header() {
-  const [menu, setMenu] = useState(true);
-  const navRef = useRef(null);
+export default function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [menu, setMenu] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const menuRef = useRef(null);
 
-  const openMenu = () => {
-    setMenu(!menu ? true : false);
-  };
-
-  const closeMenu = () => {
-    window.scroll(0, 0);
-    if (window.innerWidth <= 700) {
-      setMenu(false);
-    }
+  const goHome = () => {
+    navigate("/");
   };
 
   useEffect(() => {
-    setMenu(window.innerWidth > 700);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        menu &&
-        window.innerWidth <= 700 &&
-        navRef.current &&
-        !navRef.current.contains(event.target)
-      ) {
-        setMenu(false);
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        handleCloseMenu();
       }
-    };
+    }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [menu]);
+    if (menu && !isClosing) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menu, isClosing]);
+
+  const handleCloseMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setMenu(false);
+      setIsClosing(false);
+    }, 500);
+  };
 
   return (
-    <header className={styles.header} ref={navRef}>
-      <div className={styles.container}>
-        <Link to="/" className={styles.logo} onClick={() => closeMenu()}>
-          <img src={Logo} alt="Logo" />
-        </Link>
+    <header className={styles.header}>
+      <div className={`${styles.container} ${styles.logoContainer}`}>
+        <img src={Logo} alt="Logo" className={styles.logo} onClick={goHome} />
+      </div>
 
-        <div className={styles.boton} onClick={openMenu}>
-          <label htmlFor="btn-menu">Menu</label>
+      <nav className={styles.container}>
+        <ul className={styles.list}>
+          <Link
+            to="/"
+            className={styles.link}
+            style={{ color: location.pathname === "/" ? "#f57c48" : "" }}
+          >
+            Home
+          </Link>
+
+          <Link
+            to="/services"
+            className={styles.link}
+            style={{
+              color: location.pathname === "/services" ? "#f57c48" : "",
+            }}
+          >
+            Services
+          </Link>
+
+          <Link
+            to="/team"
+            className={styles.link}
+            style={{ color: location.pathname === "/team" ? "#f57c48" : "" }}
+          >
+            Team
+          </Link>
+
+          <Link
+            to="/contact"
+            className={styles.buttonLink}
+            style={{
+              backgroundColor:
+                location.pathname === "/contact" ? "#f57c48" : "",
+            }}
+          >
+            Contact
+          </Link>
+        </ul>
+
+        <div className={styles.iconContainer}>
+          <button className={styles.button} onClick={() => setMenu(true)}>
+            <GiHamburgerMenu />
+          </button>
         </div>
+      </nav>
 
-        {menu && (
-          <nav className={styles.menu}>
+      {menu && (
+        <div
+          className={`${styles.menu} ${isClosing ? styles.hide : styles.show}`}
+          ref={menuRef}
+        >
+          <div className={styles.menuContainer}>
+            <img
+              src={Logo}
+              alt="Logo"
+              className={styles.logo}
+              onClick={() => {
+                goHome();
+                handleCloseMenu();
+              }}
+            />
+
+            <div>
+              <button className={styles.button} onClick={handleCloseMenu}>
+                <IoCloseSharp />
+              </button>
+            </div>
+          </div>
+
+          <ul className={styles.menuList}>
             <Link
               to="/"
-              className={styles.rutasNav}
-              onClick={() => closeMenu()}
+              className={styles.link}
+              style={{ color: location.pathname === "/" ? "#f57c48" : "" }}
+              onClick={handleCloseMenu}
             >
               Home
             </Link>
+
             <Link
               to="/services"
-              className={styles.rutasNav}
-              onClick={() => closeMenu()}
+              className={styles.link}
+              style={{
+                color: location.pathname === "/services" ? "#f57c48" : "",
+              }}
+              onClick={handleCloseMenu}
             >
               Services
             </Link>
-            <Link
-              to="/contact"
-              className={styles.rutasNav}
-              onClick={() => closeMenu()}
-            >
-              Contact
-            </Link>
+
             <Link
               to="/team"
-              className={styles.rutasNav}
-              onClick={() => closeMenu()}
+              className={styles.link}
+              style={{ color: location.pathname === "/team" ? "#f57c48" : "" }}
+              onClick={handleCloseMenu}
             >
               Team
             </Link>
-          </nav>
-        )}
-      </div>
+
+            <Link
+              to="/contact"
+              className={styles.link}
+              style={{
+                color: location.pathname === "/contact" ? "#f57c48" : "",
+              }}
+              onClick={handleCloseMenu}
+            >
+              Contact
+            </Link>
+
+            <div className={styles.flexContainer}>
+              <FaFacebook
+                className={styles.socialNetworks}
+                onClick={() => handleOpenLink("https://www.facebook.com/")}
+              />
+              <FaInstagram
+                className={styles.socialNetworks}
+                onClick={() => handleOpenLink("https://www.instagram.com/")}
+              />
+              <FaTwitter
+                className={styles.socialNetworks}
+                onClick={() => handleOpenLink("https://x.com/")}
+              />
+              <FaLinkedin
+                className={styles.socialNetworks}
+                onClick={() => handleOpenLink("https://www.linkedin.com/")}
+              />
+            </div>
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
-
-export default Header;

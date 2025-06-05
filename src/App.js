@@ -1,37 +1,27 @@
-import React from "react";
+import "./global.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Contact from "./components/contact/contact.jsx";
-import Home from "./components/home/home";
-import Team from "./components/team/team";
-import Services from "./components/services/services";
-
-
+import Home from "./pages/home/home";
+import ServicesPage from "./pages/servicesPage/servicePage";
+import TeamPage from "./pages/teamPage/teamPage";
+import Contact from "./pages/contact/contact";
 
 function App() {
-
   return (
-
     <BrowserRouter>
-
       <Header />
 
       <Routes>
-
-        <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<Home />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/services" element={<Services />} />
-
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
-
     </BrowserRouter>
-
   );
-
-};
+}
 
 export default App;
