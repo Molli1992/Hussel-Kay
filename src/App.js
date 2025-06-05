@@ -6,11 +6,13 @@ import Home from "./pages/home/home";
 import ServicesPage from "./pages/servicesPage/servicePage";
 import TeamPage from "./pages/teamPage/teamPage";
 import Contact from "./pages/contact/contact";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
