@@ -24,7 +24,9 @@ export default function AboutUs() {
           </p>
 
           <div className={styles.flexContainer}>
-            <FaRegCircleCheck className={styles.icon} />
+            <div>
+              <FaRegCircleCheck className={styles.icon} />
+            </div>
 
             <p className={styles.text}>
               Customized marketing strategies designed to meet your business
@@ -33,7 +35,9 @@ export default function AboutUs() {
           </div>
 
           <div className={styles.flexContainer}>
-            <FaRegCircleCheck className={styles.icon} />
+            <div>
+              <FaRegCircleCheck className={styles.icon} />
+            </div>
 
             <p className={styles.text}>
               Data-driven campaigns that boost visibility and drive real
