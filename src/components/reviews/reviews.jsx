@@ -71,6 +71,7 @@ export default function Reviews() {
                   </div>
                 );
               }
+              return null;
             })}
 
           <div>

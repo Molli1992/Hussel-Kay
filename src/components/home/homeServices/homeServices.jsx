@@ -41,6 +41,7 @@ export default function HomeServices() {
                 />
               );
             }
+            return null;
           })}
       </div>
     </section>

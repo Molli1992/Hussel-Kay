@@ -10,7 +10,7 @@ export default function HeroHeader({ title, route }) {
         <Link to="/" className={styles.link}>
           Home
         </Link>
-        <p className={styles.line}>//</p>
+        <p className={styles.line}>{"//"}</p>
         <p className={styles.text}>{route}</p>
       </div>
     </section>
